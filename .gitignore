@@ -1,0 +1,31 @@
+# Archivos compilados de Java
+*.class
+
+# Archivos de depuración
+*.log
+
+# Archivos del sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Archivos temporales
+*.tmp
+*.bak
+*~
+
+# Directorio de salida
+out/
+target/
+build/
