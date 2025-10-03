@@ -1,4 +1,7 @@
-package proyectoFinal; 
+//RECURSIVIDAD
+// Clase que define tareas de departamento con métodos recursivos para cálculos de tiempo y manejo de subtareas
+
+package proyectoFinal;
 
 import java.util.ArrayList; 
 import java.util.List; 
@@ -6,17 +9,17 @@ import java.util.List;
 public class DepartmentTask { 
     // ATRIBUTOS BÁSICOS (variables de la clase)
     private static int nextId = 1; // Variable estática para generar IDs únicos
-    private int taskId; // NUEVO: ID único para cada tarea
+    private int taskId; // ID único para cada tarea
     private String taskDescription; // Variable privada para almacenar la descripción de la tarea
     private String department; // Variable privada para almacenar el nombre del departamento responsable
     private String status; // Variable privada para almacenar el estado de la tarea (Pendiente, En Proceso, Completada)
-    private int estimatedHours; // NUEVO: Tiempo estimado en horas para completar la tarea
-    private Employee assignedEmployee; // NUEVO: Empleado asignado a esta tarea (puede ser null)
-    private DepartmentTask parentTask; // NUEVO: Tarea padre (para crear jerarquías)
-    private List<DepartmentTask> subtasks; // NUEVA: Lista de subtareas para aplicar recursión
+    private int estimatedHours; // Tiempo estimado en horas para completar la tarea
+    private Employee assignedEmployee; // Empleado asignado a esta tarea (puede ser null)
+    private DepartmentTask parentTask; // Tarea padre (para crear jerarquías)
+    private List<DepartmentTask> subtasks; // Lista de subtareas para aplicar recursión
 
     // CONSTRUCTOR de la clase DepartmentTask
-    public DepartmentTask(String taskDescription, String department, String status, int estimatedHours) { // Constructor que recibe descripción, departamento, estado y tiempo estimado
+    public DepartmentTask(String taskDescription, String department, String status, int estimatedHours) { 
         this.taskId = nextId++; // Asignar ID único y luego incrementar para la siguiente tarea
         this.taskDescription = taskDescription; // Asignar la descripción recibida al atributo taskDescription de esta instancia
         this.department = department; // Asignar el departamento recibido al atributo department de esta instancia
@@ -25,7 +28,7 @@ public class DepartmentTask {
         this.assignedEmployee = null; // Inicialmente sin empleado asignado
         this.parentTask = null; // Inicialmente sin tarea padre
         this.subtasks = new ArrayList<>(); // Inicializar lista de subtareas vacía
-    } // Fin del constructor
+    } 
     
     // CONSTRUCTOR SOBRECARGADO para compatibilidad con código existente
     public DepartmentTask(String taskDescription, String department, String status) { // Constructor que recibe solo descripción, departamento y estado
@@ -182,22 +185,22 @@ public class DepartmentTask {
         info.append("Estado: ").append(status).append("\n"); // Estado actual
         info.append("Tiempo estimado: ").append(estimatedHours).append(" horas\n"); // Tiempo estimado
         info.append("Empleado asignado: ").append(assignedEmployee != null ? assignedEmployee.getName() : "Sin asignar").append("\n");
-        
-        // INFORMACIÓN RECURSIVA DE ESTADÍSTICAS
-        info.append("\n=== ESTADÍSTICAS RECURSIVAS ===\n");
-        info.append("Tiempo total (con subtareas): ").append(calculateTotalEstimatedTime()).append(" horas\n");
-        info.append("Total de tareas (con subtareas): ").append(countAllTasks()).append("\n");
-        info.append("Tiempo restante: ").append(calculateRemainingTime()).append(" horas\n");
-        info.append("Progreso completado: ").append(String.format("%.1f", calculateCompletionPercentage())).append("%\n");
+                
+// INFORMACIÓN RECURSIVA DE ESTADÍSTICAS
+        info.append("\n=== ESTADÍSTICAS RECURSIVAS ===\n"); // Agregar título de sección de estadísticas
+        info.append("Tiempo total (con subtareas): ").append(calculateTotalEstimatedTime()).append(" horas\n"); // Mostrar tiempo calculado recursivamente
+        info.append("Total de tareas (con subtareas): ").append(countAllTasks()).append("\n"); // Mostrar conteo total recursivo
+        info.append("Tiempo restante: ").append(calculateRemainingTime()).append(" horas\n"); // Mostrar tiempo pendiente recursivo
+        info.append("Progreso completado: ").append(String.format("%.1f", calculateCompletionPercentage())).append("%\n"); // Mostrar porcentaje con 1 decimal
         
         // INFORMACIÓN DE SUBTAREAS
-        if (!subtasks.isEmpty()) {
-            info.append("\n=== SUBTAREAS (").append(subtasks.size()).append(") ===\n");
-            for (DepartmentTask subtask : subtasks) {
-                info.append("  • ").append(subtask.toString()).append("\n");
+        if (!subtasks.isEmpty()) { // Si tiene subtareas
+            info.append("\n=== SUBTAREAS (").append(subtasks.size()).append(") ===\n"); // Título con cantidad de subtareas
+            for (DepartmentTask subtask : subtasks) { // Recorrer cada subtarea
+                info.append("  • ").append(subtask.toString()).append("\n"); // Agregar subtarea con viñeta
             }
         }
         
         return info.toString(); // Retornar información completa con estadísticas recursivas
-    } // Fin del método getFullInfo mejorado
-} // Fin de la clase DepartmentTask MEJORADA
+    }
+}

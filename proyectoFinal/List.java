@@ -1,3 +1,4 @@
+// Lista estática para gestionar tareas de departamentos con operaciones CRUD y análisis recursivo
 package proyectoFinal; // Declaración del paquete donde está la clase List
 
 public class List { // Definir la clase List que implementa una lista estática para manejar tareas por departamento

@@ -1,11 +1,13 @@
-package proyectoFinal; // Declaración del paquete donde está la clase UrgentTask
+//COLAS PRIORIZADAS CON HEAP (SIN LÍMITE DE PRIORIDADES)
+// Clase que representa tareas urgentes con prioridad para usar en cola de prioridad
+package proyectoFinal; 
 
-public class UrgentTask { // Definir la clase UrgentTask para tareas urgentes con prioridad
+public class UrgentTask {
     // ATRIBUTOS 
-    private String description; // Descripción de la tarea
-    private int priority; // Prioridad de la tarea (1-10, donde 10 es más urgente)
-    private String dueDate; // Fecha de entrega
-    private String department; // Departamento responsable
+    private String description; 
+    private int priority; 
+    private String dueDate; 
+    private String department; 
 
     // CONSTRUCTOR COMPLETO
     public UrgentTask(String description, int priority, String dueDate) { 

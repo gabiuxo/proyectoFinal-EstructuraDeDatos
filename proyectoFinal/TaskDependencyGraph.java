@@ -1,3 +1,6 @@
+//RECURSIVIDAD y GRAFOS
+// Grafo dirigido con matriz de adyacencia para gestionar dependencias entre tareas y algoritmos de recorrido
+
 package proyectoFinal; // Declaración del paquete
 
 import java.util.*; // Importar utilidades de colecciones

@@ -1,3 +1,6 @@
+//TABLAS HASHMAPS
+// Sistema de gestión de empleados usando HashMap para búsquedas rápidas por ID, departamento y nombre
+
 package proyectoFinal; // Declaración del paquete
 
 import java.util.HashMap; // Para implementar tablas hash

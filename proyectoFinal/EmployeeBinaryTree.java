@@ -1,9 +1,8 @@
+//ARBOLES BINARIOS Y RECURSIVIDAD
+// Árbol binario de búsqueda para organizar empleados por ID con operaciones recursivas de inserción, búsqueda y eliminación
+
 package proyectoFinal; // Declaración del paquete
 
-/**
- * Implementación de Árbol Binario de Búsqueda para gestionar empleados
- * Organiza empleados por ID para búsquedas eficientes
- */
 public class EmployeeBinaryTree { // Clase que implementa árbol binario de búsqueda
     
     // CLASE INTERNA para representar nodos del árbol

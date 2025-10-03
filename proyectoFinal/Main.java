@@ -1,3 +1,4 @@
+// Programa principal que integra todas las estructuras de datos y proporciona interfaz de usuario
 package proyectoFinal; // Declarar el paquete donde está la clase
 import javax.swing.JOptionPane; // Importar la clase para ventanas de diálogo
 import java.util.ArrayList; // Importar ArrayList para manejar listas de empleados

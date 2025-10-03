@@ -1,33 +1,32 @@
-package proyectoFinal; // Declaración del paquete
+//RECURSIVIDAD
+// Clase que define empleados con jerarquía organizacional y métodos recursivos para contar subordinados
 
-import java.util.ArrayList; // Importar ArrayList para lista de subordinados
-import java.util.List; // Importar interfaz List
+package proyectoFinal; 
 
-/**
- * Clase Employee que representa un empleado con información jerárquica
- */
+import java.util.ArrayList; 
+import java.util.List; 
+
 public class Employee { // Clase que define la estructura de un empleado
-    
     // ATRIBUTOS del empleado
-    private int id; // ID único del empleado
-    private String name; // Nombre completo del empleado
-    private String department; // Departamento al que pertenece
-    private String position; // Puesto/cargo del empleado
-    private double score; // Puntuación de desempeño del empleado (0.0 - 100.0)
-    private int assignedTasks; // Cantidad de tareas asignadas actualmente
-    private Employee leader; // Referencia al jefe/líder directo
-    private List<Employee> subordinates; // Lista de empleados que reportan a este empleado
+    private int id; 
+    private String name; 
+    private String department; 
+    private String position; 
+    private double score; 
+    private int assignedTasks; 
+    private Employee leader; 
+    private List<Employee> subordinates; 
     
     // CONSTRUCTOR
     public Employee(int id, String name, String department, String position, double score) {
-        this.id = id; // Asignar ID único
-        this.name = name; // Asignar nombre
-        this.department = department; // Asignar departamento
-        this.position = position; // Asignar posición
-        this.score = score; // Asignar puntuación inicial
-        this.assignedTasks = 0; // Inicializar tareas asignadas en 0
-        this.leader = null; // Sin líder inicialmente
-        this.subordinates = new ArrayList<>(); // Inicializar lista de subordinados vacía
+        this.id = id; 
+        this.name = name; 
+        this.department = department; 
+        this.position = position; 
+        this.score = score; 
+        this.assignedTasks = 0; 
+        this.leader = null; 
+        this.subordinates = new ArrayList<>(); 
     }
     
     // MÉTODOS GETTER

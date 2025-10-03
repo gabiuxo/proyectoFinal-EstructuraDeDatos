@@ -1,3 +1,6 @@
+//TABLAS HASHMAPS
+// Sistema de asignación de tareas usando múltiples HashMap para búsquedas eficientes por empleado, departamento y estado
+
 package proyectoFinal; // Declaración del paquete donde está la clase TaskAssignmentHashMap
 
 import java.util.HashMap; // Importar HashMap para estructuras de datos hash
